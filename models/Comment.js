@@ -37,3 +37,5 @@ Comment.init(
     modelName: 'post',
   }
 );
+
+module.exports = Comment;
