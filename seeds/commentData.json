@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Test comment 1 for post 1",
+    "user_id": 1,
+    "post_id": 1
+  },
+  {
+    "content": "Test comment 2 for post 1",
+    "user_id": 2,
+    "post_id": 1
+  },
+  {
+    "content": "Test comment 1 for post 2",
+    "user_id": 2,
+    "post_id": 2
+  },
+  {
+    "content": "Test comment 1 for post 3",
+    "user_id": 2,
+    "post_id": 3
+  }
+]
