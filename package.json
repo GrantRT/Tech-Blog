@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/GrantRT/Tech-Blog/issues"
   },
-  "homepage": "https://github.com/GrantRT/Tech-Blog#readme"
+  "homepage": "https://github.com/GrantRT/Tech-Blog#readme",
+  "devDependencies": {}
 }
