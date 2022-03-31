@@ -2,7 +2,7 @@ const postFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the post form
-  const title = document.querySelector('#post-login').value.trim();
+  const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
 
   if (title && content) {
