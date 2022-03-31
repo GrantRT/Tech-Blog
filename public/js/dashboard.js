@@ -37,5 +37,5 @@ const deletePostHandler = async (event) => {
   }
 };
 
-document.querySelector('.post-form').addEventListener('submit', postFormHandler);
+document.querySelector('.new-post-form').addEventListener('submit', postFormHandler);
 document.querySelector('.post-list').addEventListener('click', deletePostHandler);
