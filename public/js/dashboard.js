@@ -1,3 +1,4 @@
+// Make a new post
 const postFormHandler = async (event) => {
   event.preventDefault();
 
@@ -21,6 +22,7 @@ const postFormHandler = async (event) => {
   }
 };
 
+// Delete a post
 const deletePostHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');

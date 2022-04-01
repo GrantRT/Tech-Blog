@@ -1,21 +1,29 @@
 [
   {
+    "id": 1,
     "content": "Test comment 1 for post 1",
+    "date_posted": "03/27/2022",
     "user_id": 1,
     "post_id": 1
   },
   {
+    "id": 2,
     "content": "Test comment 2 for post 1",
+    "date_posted": "03/21/2022",
     "user_id": 2,
     "post_id": 1
   },
   {
+    "id": 3,
     "content": "Test comment 1 for post 2",
+    "date_posted": "03/23/2022",
     "user_id": 2,
     "post_id": 2
   },
   {
+    "id": 4,
     "content": "Test comment 1 for post 3",
+    "date_posted": "03/20/2022",
     "user_id": 2,
     "post_id": 3
   }
