@@ -29,17 +29,12 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // Edit a blog post
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/edit', withAuth, async (req, res) => {
   try {
-    const postData = await Post.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
-    });
-
-    res.status(200).json(postData);
+    await Post.update(req.body, { where: { id: req.body.id } });
+    res.status(200).render('dashboard', { logged_in: req.session.logged_in });
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 

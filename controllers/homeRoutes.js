@@ -94,10 +94,8 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   res.render('edit', { post, logged_in: req.session.logged_in });
 });
 
-module.exports = router;
-
 // Edit a blog post
-router.put('post/:id', withAuth, async (req, res) => {
+router.put('edit/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.update(req.body, {
       where: {
@@ -110,3 +108,5 @@ router.put('post/:id', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+module.exports = router;
