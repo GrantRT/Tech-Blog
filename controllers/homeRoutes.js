@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a single post, including the comments
-router.get('/post/:id', withAuth, async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -87,4 +87,26 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+// Get a post to edit
+router.get('/edit/:id', withAuth, async (req, res) => {
+  const postData = await Post.findByPk(req.params.id, {});
+  const post = postData.get({ plain: true });
+  res.render('edit', { post, logged_in: req.session.logged_in });
+});
+
 module.exports = router;
+
+// Edit a blog post
+router.put('post/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});

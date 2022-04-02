@@ -4,16 +4,18 @@
   <p>Created by {{user.username}} on {{format_date date_posted}}</p>
 </div>
 
-<div>
-  <form class='new-comment-form' data-id='{{id}}'>
-    <div>
-      <textarea id='comment-content' name='comment-body' placeholder='Enter your comment here'></textarea>
-    </div>
-    <div>
-      <button type='submit'>Add Comment</button>
-    </div>
-  </form>
-</div>
+{{#if logged_in}}
+  <div>
+    <form class='new-comment-form' data-id='{{id}}'>
+      <div>
+        <textarea id='comment-content' name='comment-body' placeholder='Enter your comment here'></textarea>
+      </div>
+      <div>
+        <button type='submit'>Add Comment</button>
+      </div>
+    </form>
+  </div>
+{{/if}}
 
 {{#if comments.length}}
   <div>

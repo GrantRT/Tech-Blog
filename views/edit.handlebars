@@ -2,15 +2,17 @@
   <div>
     <h2>Edit Post</h2>
   </div>
-  <form id='edit-post-form'>
+  <form class='edit-post-form' data-id='{{post.id}}'>
 
     <label class='form-label' for='post-title'>Title</label>
     <input type='text' id='post-title' value='{{post.title}}' />
 
-    <label class='form-label' for='post-body'>Content</label>
-    <textarea id='post-body'>{{post.body}}</textarea>
+    <label class='form-label' for='post-content'>Content</label>
+    <textarea id='post-content'>{{post.content}}</textarea>
 
     <button type='submit'>Submit your changes</button>
 
   </form>
 </div>
+
+<script src='../js/edit.js'></script>

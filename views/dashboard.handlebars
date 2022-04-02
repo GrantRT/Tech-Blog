@@ -17,18 +17,21 @@
   </div>
 
   {{#if posts.length}}
-    <div class='post-list'>
+    <div id='post-list' class='post-list'>
       <h2>Your posts:</h2>
 
       {{#each posts as |post|}}
+
         <div>
-          <div>
-            <h4><a href='/post/{{post.id}}'>{{post.title}}</a></h4>
-          </div>
-          <div>
-            <button data-id='{{post.id}}'>Delete post</button>
-          </div>
+          <h4><a href='/post/{{post.id}}'>{{post.title}}</a></h4>
         </div>
+        <div id='editBtn'>
+          <a data-id='{{post.id}}' href='/edit/{{post.id}}'><button>Edit post</button></a>
+        </div>
+        <div class='deleteBtn'>
+          <button data-id='{{post.id}}'>Delete post</button>
+        </div>
+
       {{/each}}
     </div>
   {{/if}}

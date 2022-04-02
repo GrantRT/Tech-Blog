@@ -11,7 +11,6 @@ const commentFormHandler = async (event) => {
       body: JSON.stringify({ post_id: post_id, content: comment_content }),
       headers: { 'Content-Type': 'application/json' },
     });
-    console.log(response);
     if (response.ok) {
       document.location.reload();
     } else {
