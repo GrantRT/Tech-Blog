@@ -1,5 +1,6 @@
 <div>
   <div>
+    {{! create a new post form }}
     <form class='new-post-form'>
       <div class='w-full flex justify-center'>
         <div class='mt-3 mb-3 xl:w-4/6'>
@@ -36,6 +37,7 @@
     </form>
   </div>
 
+  {{! if the logged in user has created posts, show them here }}
   {{#if posts.length}}
     <div id='post-list' class='post-list mt-10'>
       <h2 class='text-white flex justify-center'>Your posts:</h2>

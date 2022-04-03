@@ -1,3 +1,5 @@
+// function to edit a post when the edit post button is clicked
+
 const updatePostFormHandler = async (event) => {
   event.preventDefault();
   const title = document.querySelector('#post-title').value;

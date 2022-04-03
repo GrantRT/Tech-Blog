@@ -1,3 +1,4 @@
+{{!-- show individual post content --}}
 <div class='w-full flex justify-around justify-center mt-10'>
   <div class='posts-comments w-4/6 block p-6 rounded-lg shadow-lg'>
     <h5 class='flex justify-center text-xl leading-tight font-medium mb-8 ml-10 mr-10'>{{title}}</h5>
@@ -6,6 +7,7 @@
   </div>
 </div>
 
+{{!-- if logged in have the ability to add comments --}}
 {{#if logged_in}}
     <form class='new-comment-form' data-id='{{id}}'>
       <div class='flex justify-center mt-8'>
@@ -31,6 +33,7 @@
   </div>
 {{/if}}
 
+{{!-- comments belonging to the individual post --}}
 {{#if comments.length}}
   <div class="w-full mt-10">
     <h2 id="comments-title" class="flex justify-center">Comments:</h2>

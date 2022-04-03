@@ -1,3 +1,4 @@
+// function to post new comments when the "add comment" button is clicked
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
