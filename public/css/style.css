@@ -1,0 +1,28 @@
+body {
+  background-color: #1a1a40;
+  font-family: 'Exo 2', sans-serif;
+}
+
+nav {
+  background-color: #7a0bc0;
+  color: #fff;
+  border-bottom: 5px;
+  border-style: solid;
+  border-color: #1a1a40;
+}
+
+#jumbo {
+  color: #fff;
+}
+
+a:hover {
+  color: black;
+}
+
+.posts-comments {
+  background-color: #7a0bc0;
+  color: #fff;
+}
+#comments-title {
+  color: #fff;
+}

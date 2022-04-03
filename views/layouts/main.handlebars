@@ -5,8 +5,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Tech Blog</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' />
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' />
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Ingrid+Darling&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/css/style.css' />
     <script src='https://cdn.tailwindcss.com'></script>
     <script>
@@ -16,15 +18,15 @@
 
   <body>
     <div>
-      <header>
-       <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
+      <header class="sticky top-0 z-50">
+       <nav class="navbar navbar-expand-lg shadow-md py-2 relative flex items-center w-full justify-between">
         <div class="px-6 w-full flex flex-wrap items-center justify-between">
           
           <div class="grow items-center" id="navbarSupportedContentY">
             <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
               <li class="nav-item">
                 <a
-                  class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                  class="nav-link block pr-2 lg:px-2 py-2 transition duration-150 ease-in-out"
                   href="/"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
@@ -34,7 +36,7 @@
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
               <li class="nav-item">
-                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                <a class="nav-link block pr-2 lg:px-2 py-2 transition duration-150 ease-in-out"
                   href='/dashboard'
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
@@ -43,7 +45,7 @@
               <li class="nav-item">
                 <a
                   id="logout"
-                  class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                  class="nav-link block pr-2 lg:px-2 py-2 transition duration-150 ease-in-out"
                   href="#!"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
@@ -52,7 +54,7 @@
           {{else}}
                <li class="nav-item mb-2 lg:mb-0">
                 <a
-                  class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                  class="nav-link block pr-2 lg:px-2 py-2 transition duration-150 ease-in-out"
                   href="/login"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
@@ -60,11 +62,12 @@
               </li>
           {{/if}}
         </nav>
-        <div class="text-center bg-gray-50 text-gray-800 py-10 px-6">
+        
+      </header>
+      <div id="jumbo" class="text-center py-10 px-6">
         <h1 class="text-5xl font-bold mt-0 mb-6">Tech Blog</h1>
         <h3 class="text-3xl font-bold mb-8">The only blog you need for all your tech discussions!</h3>
       </div>
-      </header>
       <main>
         <!-- Render the sub layout -->
         {{{body}}}

@@ -1,8 +1,8 @@
 <div class='w-full flex justify-around justify-center mt-10'>
-  <div class='w-4/6 block p-6 rounded-lg shadow-lg bg-white'>
-    <h5 class='flex justify-center text-gray-900 text-xl leading-tight font-medium mb-8 ml-10 mr-10'>{{title}}</h5>
-    <p class='text-gray-700 text-base mb-10 ml-10 mr-10'>{{content}}</p>
-    <p class='flex justify-center text-gray-900 text-l leading-tight font-medium mb-8 ml-10 mr-10'>Created by {{user.username}} on {{format_date date_posted}}</p>
+  <div class='posts-comments w-4/6 block p-6 rounded-lg shadow-lg'>
+    <h5 class='flex justify-center text-xl leading-tight font-medium mb-8 ml-10 mr-10'>{{title}}</h5>
+    <p class='text-base mb-10 ml-10 mr-10'>{{content}}</p>
+    <p class='flex justify-center text-l leading-tight font-medium mb-8 ml-10 mr-10'>Created by {{user.username}} on {{format_date date_posted}}</p>
   </div>
 </div>
 
@@ -33,12 +33,12 @@
 
 {{#if comments.length}}
   <div class="w-full mt-10">
-    <h2 class="flex justify-center" >Comments:</h2>
+    <h2 id="comments-title" class="flex justify-center">Comments:</h2>
     {{#each comments as |comment|}}
     <div class="w-full flex justify-around justify-center mt-10">
-      <div class="w-3/6 block p-6 rounded-lg shadow-lg bg-white">
-        <p class="text-gray-700 text-base mb-10 ml-10 mr-10">{{comment.content}}</p>
-        <p class="flex justify-center text-gray-900 text-l leading-tight font-medium mb-8 ml-10 mr-10">Comment posted by {{comment.user.username}} on {{format_date date_posted}}</p>
+      <div class="posts-comments w-3/6 block p-6 rounded-lg shadow-lg">
+        <p class="text-base mb-10 ml-10 mr-10">{{comment.content}}</p>
+        <p class="flex justify-center text-l leading-tight font-medium mb-8 ml-10 mr-10">Comment posted by {{comment.user.username}} on {{format_date date_posted}}</p>
       </div>
     </div>
 {{/each}} 
